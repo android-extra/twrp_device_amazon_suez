@@ -1,0 +1,66 @@
+~ # ls -al /dev/block/platform/soc/by-name/
+__bionic_open_tzdata: couldn't find any tzdata when looking for localtime!
+__bionic_open_tzdata: couldn't find any tzdata when looking for GMT!
+__bionic_open_tzdata: couldn't find any tzdata when looking for posixrules!
+drwxr-xr-x    2 root     root           640 Mar 28 11:10 .
+drwxr-xr-x    4 root     root           580 Mar 28 11:10 ..
+lrwxrwxrwx    1 root     root            20 Mar 28 11:10 MISC -> /dev/block/mmcblk0p9
+lrwxrwxrwx    1 root     root            20 Mar 28 11:10 PMT -> /dev/block/mmcblk0p2
+lrwxrwxrwx    1 root     root            21 Mar 28 11:10 boot -> /dev/block/mmcblk0p11
+lrwxrwxrwx    1 root     root             9 Mar 28 11:10 boot0hdr0 -> /dev/null
+lrwxrwxrwx    1 root     root            25 Mar 28 11:10 boot0hdr0_real -> /dev/block/mmcblk0boot0p1
+lrwxrwxrwx    1 root     root             9 Mar 28 11:10 boot0hdr1 -> /dev/null
+lrwxrwxrwx    1 root     root            25 Mar 28 11:10 boot0hdr1_real -> /dev/block/mmcblk0boot0p2
+lrwxrwxrwx    1 root     root             9 Mar 28 11:10 boot0img0 -> /dev/null
+lrwxrwxrwx    1 root     root            25 Mar 28 11:10 boot0img0_real -> /dev/block/mmcblk0boot0p3
+lrwxrwxrwx    1 root     root             9 Mar 28 11:10 boot0img1 -> /dev/null
+lrwxrwxrwx    1 root     root            25 Mar 28 11:10 boot0img1_real -> /dev/block/mmcblk0boot0p4
+lrwxrwxrwx    1 root     root            21 Mar 28 11:10 boot_amonet -> /dev/block/mmcblk0p16
+lrwxrwxrwx    1 root     root            21 Mar 28 11:10 boot_x -> /dev/block/mmcblk0p11
+lrwxrwxrwx    1 root     root            21 Mar 28 11:10 cache -> /dev/block/mmcblk0p14
+lrwxrwxrwx    1 root     root            20 Mar 28 11:10 dkb -> /dev/block/mmcblk0p4
+lrwxrwxrwx    1 root     root            20 Mar 28 11:10 kb -> /dev/block/mmcblk0p3
+lrwxrwxrwx    1 root     root             9 Mar 28 11:10 lk -> /dev/null
+lrwxrwxrwx    1 root     root            20 Mar 28 11:10 lk_real -> /dev/block/mmcblk0p5
+lrwxrwxrwx    1 root     root            20 Mar 28 11:10 metadata -> /dev/block/mmcblk0p8
+lrwxrwxrwx    1 root     root            20 Mar 28 11:10 proinfo -> /dev/block/mmcblk0p1
+lrwxrwxrwx    1 root     root            21 Mar 28 11:10 recovery -> /dev/block/mmcblk0p12
+lrwxrwxrwx    1 root     root            21 Mar 28 11:10 recovery_amonet -> /dev/block/mmcblk0p17
+lrwxrwxrwx    1 root     root            21 Mar 28 11:10 recovery_x -> /dev/block/mmcblk0p12
+lrwxrwxrwx    1 root     root            21 Mar 28 11:10 reserved -> /dev/block/mmcblk0p10
+lrwxrwxrwx    1 root     root            21 Mar 28 11:10 system -> /dev/block/mmcblk0p13
+lrwxrwxrwx    1 root     root             9 Mar 28 11:10 tee1 -> /dev/null
+lrwxrwxrwx    1 root     root            20 Mar 28 11:10 tee1_real -> /dev/block/mmcblk0p6
+lrwxrwxrwx    1 root     root             9 Mar 28 11:10 tee2 -> /dev/null
+lrwxrwxrwx    1 root     root            20 Mar 28 11:10 tee2_real -> /dev/block/mmcblk0p7
+lrwxrwxrwx    1 root     root            21 Mar 28 11:10 userdata -> /dev/block/mmcblk0p15
+
+~ # cat /proc/partitions 
+major minor  #blocks  name
+
+ 179        0   30535680 mmcblk0
+ 179        1       3072 mmcblk0p1
+ 179        2       4608 mmcblk0p2
+ 179        3       1024 mmcblk0p3
+ 179        4       1024 mmcblk0p4
+ 179        5       1024 mmcblk0p5
+ 179        6       5120 mmcblk0p6
+ 179        7       5120 mmcblk0p7
+ 179        8      40448 mmcblk0p8
+ 179        9        512 mmcblk0p9
+ 179       10       8192 mmcblk0p10
+ 179       11      16384 mmcblk0p11
+ 179       12      17408 mmcblk0p12
+ 179       13    1653248 mmcblk0p13
+ 179       14     434176 mmcblk0p14
+ 179       15   28118016 mmcblk0p15
+ 179       16     112640 mmcblk0p16
+ 179       17     112640 mmcblk0p17
+ 179       96       4096 mmcblk0rpmb
+ 179       64       4096 mmcblk0boot1
+ 179       32       1024 mmcblk0boot0
+ 179       33          2 mmcblk0boot0p1
+ 179       34          2 mmcblk0boot0p2
+ 179       35        256 mmcblk0boot0p3
+ 179       36        747 mmcblk0boot0p4
+ 
