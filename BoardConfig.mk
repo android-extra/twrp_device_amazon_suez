@@ -2,22 +2,34 @@ DEVICE := device/amazon/suez
 KERNEL := kernel/amazon/suez
 VENDOR := vendor/amazon/suez
 
+# Platform
 TARGET_BOARD_PLATFORM := mt8173
 
+# Bootloader
+TARGET_NO_BOOTLOADER := true
+TARGET_BOOTLOADER_BOARD_NAME := suez
+
+# For building with minimal manifest
+ALLOW_MISSING_DEPENDENCIES := true
+
+# Assert
+TARGET_OTA_ASSERT_DEVICE := suez
+
+# Architecture
 TARGET_ARCH := arm64
 TARGET_ARCH_VARIANT := armv8-a
 TARGET_CPU_ABI := arm64-v8a
-TARGET_CPU_ABI2 := arm64
 TARGET_CPU_VARIANT := generic
 
 TARGET_2ND_ARCH := arm
 TARGET_2ND_ARCH_VARIANT := armv7-a-neon
 TARGET_2ND_CPU_ABI := armeabi-v7a
 TARGET_2ND_CPU_ABI2 := armeabi
-TARGET_2ND_CPU_VARIANT := cortex-a7
+TARGET_2ND_CPU_VARIANT := cortex-a15
 
-TARGET_CPU_ABI_LIST := arm64-v8a,arm64,armeabi-v7a,armeabi
-TARGET_CPU_ABI_LIST_64_BIT := arm64-v8a,arm64
+TARGET_CPU_ABI_LIST := arm64-v8a,armeabi-v7a,armeabi
+TARGET_CPU_ABI_LIST_64_BIT := arm64-v8a
+TARGET_CPU_SMP := true
 
 TARGET_USE_CUSTOM_LUN_FILE_PATH := /sys/devices/platform/mt_usb/musb-hdrc.0.auto/gadget/lun0/file
 
