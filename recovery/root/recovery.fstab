@@ -1,19 +1,11 @@
-# <file system> <mount point> <type> <mount_flags> <fs_mgr_flags>
-/dev/block/platform/mtk-msdc.0/by-name/boot0hdr0	/pl_hdr0	emmc	defaults	defaults
-/dev/block/platform/mtk-msdc.0/by-name/boot0img0	/pl_img0	emmc	defaults	defaults
-/dev/block/platform/mtk-msdc.0/by-name/boot0hdr1	/pl_hdr1	emmc	defaults	defaults
-/dev/block/platform/mtk-msdc.0/by-name/boot0img1	/pl_img1	emmc	defaults	defaults
-/dev/block/platform/mtk-msdc.0/by-name/lk           /lk               emmc    defaults defaults
-/dev/block/platform/mtk-msdc.0/by-name/lk2          /lk2              emmc    defaults defaults
-/dev/block/platform/mtk-msdc.0/by-name/boot         /boot             emmc    defaults defaults
-/dev/block/platform/mtk-msdc.0/by-name/system       /system           ext4    ro						         wait
-/dev/block/platform/mtk-msdc.0/by-name/userdata     /data             ext4    noatime,nosuid,nodev,noauto_da_alloc,discard               wait,check,encryptable=/dev/block/platform/mtk-msdc.0/by-name/metadata
-/dev/block/platform/mtk-msdc.0/by-name/cache        /cache            ext4    noatime,nosuid,nodev,noauto_da_alloc,discard               wait,check
-/dev/block/platform/mtk-msdc.0/by-name/MISC         /misc             emmc    defaults defaults
-/dev/block/platform/mtk-msdc.0/by-name/recovery     /recovery         emmc    defaults defaults
 
-/devices/soc/11240000.mmc/mmc_host/mmc*            auto      auto      defaults        voldmanaged=sdcard1:auto,encryptable=userdata
-/devices/soc/11270000.usb/xhci-hcd.*.auto/usb*     auto      auto      defaults        voldmanaged=usbotg:auto
+/system			ext4	/dev/block/platform/mtk-msdc.0/by-name/system		flags=display="System";backup=1;wipeingui
+/system_image	emmc	/dev/block/platform/mtk-msdc.0/by-name/system	    flags=backup=0;flashimg=1
+/data			ext4	/dev/block/platform/mtk-msdc.0/by-name/userdata	    flags=encryptable=/dev/block/platform/mtk-msdc.0/by-name/metadata
+/cache			ext4	/dev/block/platform/mtk-msdc.0/by-name/cache		flags=display="Cache";backup=1;wipeingui;wipeduringfactoryreset
 
-/dev/block/platform/mtk-msdc.0/by-name/tee1          /tee1           emmc  defaults defaults
-/dev/block/platform/mtk-msdc.0/by-name/tee2          /tee2           emmc  defaults defaults
+/boot			emmc	/dev/block/platform/mtk-msdc.0/by-name/boot_x       flags=display="Boot";backup=1
+/recovery		emmc	/dev/block/platform/mtk-msdc.0/by-name/recovery_x   flags=display="Recovery";backup=1
+
+/external_sd	auto	/dev/block/mmcblk1p1	/dev/block/mmcblk1    flags=display="External SDcard";storage;wipeingui;removable;backup=0
+/usbotg			auto    /dev/block/sda1		    /dev/block/sda        flags=display="USB OTG";storage;removable;backup=0
