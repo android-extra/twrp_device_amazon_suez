@@ -31,8 +31,6 @@ TARGET_CPU_ABI_LIST := arm64-v8a,armeabi-v7a,armeabi
 TARGET_CPU_ABI_LIST_64_BIT := arm64-v8a
 TARGET_CPU_SMP := true
 
-TARGET_USE_CUSTOM_LUN_FILE_PATH := /sys/devices/platform/mt_usb/musb-hdrc.0.auto/gadget/lun0/file
-
 BOARD_KERNEL_CMDLINE := bootopt=64S3,32N2,64N2
 
 BOARD_KERNEL_BASE := 0x40080000
