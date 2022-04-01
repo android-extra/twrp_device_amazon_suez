@@ -1,6 +1,6 @@
-TARGET_NO_BOOTLOADER := true
-
-DEVICE_PATH := device/amazon/suez
+DEVICE := device/amazon/suez
+KERNEL := kernel/amazon/suez
+VENDOR := vendor/amazon/suez
 
 TARGET_BOARD_PLATFORM := mt8173
 
@@ -46,7 +46,7 @@ TARGET_KERNEL_CONFIG := suez_defconfig
 TARGET_KERNEL_VARIANT_CONFIG := suez_defconfig
 
 #TARGET_RECOVERY_INITRC := $(DEVICE_PATH)/recovery/root/init.rc
-TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/recovery/root/recovery.fstab
+TARGET_RECOVERY_FSTAB := $(DEVICE)/recovery/root/recovery.fstab
 TARGET_RECOVERY_PIXEL_FORMAT := ABGR_8888
 
 RECOVERY_SDCARD_ON_DATA := true
